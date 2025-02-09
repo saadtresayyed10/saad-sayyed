@@ -16,12 +16,12 @@ const HeroSection = () => {
       <div className="flex justify-start items-start w-full mt-10">
         <h5 className="text-muted-foreground lg:w-[45%] w-[95%] lg:text-base text-sm">
           I am a Full Stack Web and App Developer who solves real-world problems
-          using efficient technologies like React.js, Node.js, Express, Next.js,
-          Golang and more. With a strong foundation in scalable architecture and
-          performance optimization, I specialize in building seamless,
-          high-performance applications. Passionate about innovation, I leverage
-          modern frameworks, databases, and cloud solutions to create impactful
-          digital experiences.
+          using efficient technologies like React.js, Svelte, Node.js, Express,
+          Next.js, Golang, Flask and more. With a strong foundation in scalable
+          architecture and performance optimization, I specialize in building
+          seamless, high-performance applications. Passionate about innovation,
+          I leverage modern frameworks, databases, and cloud solutions to create
+          impactful digital experiences.
         </h5>
       </div>
     </div>
