@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="flex justify-center items-center flex-col bg-neutral-900 w-full text-white font-unbounded lg:px-20 px-8">
       <Headings title="About" />
-      <div className="flex justify-center w-full py-10 flex-col lg:gap-y-10 gap-y-16 lg:flex-row">
+      <div className="flex justify-center w-full lg:pt-20 pt-20 flex-col lg:gap-y-10 gap-y-16 lg:flex-row">
         <div className="flex justify-start items-start lg:w-[50%] lg:h-min">
           <h3 className="lg:text-4xl text-2xl capitalize tracking-wide">
             Over the years, I have worked on customer-facing products with a

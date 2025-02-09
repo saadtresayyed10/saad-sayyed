@@ -1,17 +1,25 @@
+import Link from "next/link";
+
 const HeroSection = () => {
   return (
     <div className="flex justify-center items-center flex-col bg-neutral-900 w-full text-white font-unbounded lg:px-20 px-8">
       <div className="flex justify-between items-center w-full">
-        <h1 className="lg:text-[10rem] text-[4rem] uppercase font-extralight">
+        <Link
+          href="/"
+          className="lg:text-[10rem] text-[4rem] uppercase font-extralight"
+        >
           Saad
-        </h1>
+        </Link>
         <div />
       </div>
       <div className="flex justify-between items-center w-full">
         <div />
-        <h1 className="lg:text-[10rem] text-[4rem] uppercase font-extralight">
+        <Link
+          href="/"
+          className="lg:text-[10rem] text-[4rem] uppercase font-extralight"
+        >
           Sayyed
-        </h1>
+        </Link>
       </div>
       <div className="flex justify-start items-start w-full mt-10">
         <h5 className="text-muted-foreground lg:w-[45%] w-[95%] lg:text-base text-sm">
