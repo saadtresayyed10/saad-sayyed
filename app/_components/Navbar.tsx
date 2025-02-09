@@ -11,11 +11,14 @@ const Navbar = () => {
           Pune - MH, India
         </h4>
 
-        <h4 className="lg:block hidden relative border-violet-500 border-opacity-50 lg:border-b-2 pb-1 lg:text-xs text-sm after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-500 hover:after:w-full">
+        <Link
+          href="https://mailto:saadsyed950@gmail.com"
+          className="lg:block hidden relative border-violet-500 border-opacity-50 lg:border-b-2 pb-1 lg:text-xs text-sm after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-violet-500 after:transition-all after:duration-500 hover:after:w-full"
+        >
           Say hello
           <br />
           saadsyed950@gmail.com
-        </h4>
+        </Link>
       </div>
       <div className="lg:flex hidden justify-center items-center gap-x-6">
         {navItems.map((item, idx) => (

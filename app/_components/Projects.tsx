@@ -8,7 +8,7 @@ const Projects = () => {
     <div className="flex justify-center items-center flex-col bg-neutral-900 w-full text-white font-unbounded lg:px-20 px-8">
       <Headings title="Projects" />
       <div className="flex justify-center lg:flex-row w-full pt-20">
-        <ul className="flex justify-start items-start flex-col lg:gap-y-20 gap-y-32 w-full">
+        <ul className="flex justify-start items-start flex-col gap-y-32 w-full">
           {projects.map((project, idx) => (
             <li
               key={idx}
@@ -19,7 +19,7 @@ const Projects = () => {
               </h1>
               <h2 className="lg:text-xl text-base">{project.tags}</h2>
               <h3 className="lg:text-lg text-sm">{project.timePeriod}</h3>
-              <p className="lg:text-sm text-xs font-extralight lg:w-[50%] text-neutral-400">
+              <p className="lg:text-sm text-xs font-light lg:w-[50%] text-neutral-400">
                 {project.description}
               </p>
               <Link
