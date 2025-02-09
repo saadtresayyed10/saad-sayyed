@@ -13,9 +13,9 @@ const About = () => {
         </div>
         <div className="flex justify-start items-start flex-col gap-y-8 lg:w-[50%] lg:h-min text-sm font-extralight capitalize tracking-wide text-neutral-300">
           <p>
-            Self-taught software engineer with a strong knowledge of TypeScript,
-            Python, and Java. I am passionate about working on meaningful
-            projects that have a positive impact on people&apos; lives.
+            Software engineer with a strong knowledge of TypeScript, Python, and
+            Java. I am passionate about working on meaningful projects that have
+            a positive impact on people&apos; lives.
           </p>
           <p>
             I have hands-on experience working on high-traffic, customer-facing
@@ -28,7 +28,7 @@ const About = () => {
           </p>
           <p>
             I am fluent in English, Hindi and French and have experience working
-            and studying in an international environment.
+            and studying in a tense environment.
           </p>
         </div>
       </div>
