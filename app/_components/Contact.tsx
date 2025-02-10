@@ -5,22 +5,32 @@ import Headings from "./Headings";
 import { useState } from "react";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [thread, setThread] = useState("");
   const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email.trim()) {
-      console.log("Email is required");
+      toast({
+        title: "Cannot send message...",
+        description: "Email and message are required.",
+        variant: "destructive",
+      });
       return;
     }
 
     if (!thread.trim()) {
-      console.log("Thread is required");
+      toast({
+        title: "Cannot send message...",
+        description: "Email and message are required.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -31,7 +41,10 @@ const Contact = () => {
         thread: thread,
       });
 
-      console.log("Added to DB");
+      toast({
+        title: "Message sent!",
+        description: "Saad will respond back to you within 24 hours.",
+      });
       setEmail("");
       setThread("");
     } catch (error) {
