@@ -1,7 +1,39 @@
+"use client";
+
 import Link from "next/link";
 import Headings from "./Headings";
+import { useState } from "react";
+import axios from "axios";
+import { Loader2 } from "lucide-react";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [thread, setThread] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await axios.post("http://localhost:3000/api/contact", {
+        email: email,
+        thread: thread,
+      });
+
+      if (email === "") {
+        console.log("");
+      }
+
+      console.log("Added to DB");
+      setEmail("");
+      setThread("");
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center flex-col bg-neutral-900 w-full text-white font-unbounded lg:px-20 px-8">
       <Headings title="" />
@@ -16,19 +48,30 @@ const Contact = () => {
           saadsyed950@gmail.com
         </Link>
       </div>
-      <form className="flex justify-start items-start flex-col gap-y-4 lg:mt-16 mt-10 w-full">
+      <form
+        onSubmit={handleSubmit}
+        className="flex justify-start items-start flex-col gap-y-4 lg:mt-16 mt-10 w-full"
+      >
         <input
           type="email"
           placeholder="Enter Email"
-          className="pl-4 pr-8 py-2 bg-transparent border border-violet-500 rounded-full"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="pl-4 pr-8 py-2 bg-transparent border border-violet-500 rounded-full lg:w-[23%] w-[95%]"
         />
         <textarea
           placeholder="Enter Message"
           rows={6}
-          className="pl-4 pr-8 py-4 bg-transparent border border-violet-500 rounded-lg"
+          value={thread}
+          onChange={(e) => setThread(e.target.value)}
+          className="pl-4 pr-8 py-4 bg-transparent border border-violet-500 rounded-lg lg:w-[23%] w-[95%]"
         />
-        <button className="px-6 py-2 bg-violet-500 text-black uppercase font-normal rounded-full lg:text-sm text-xs">
-          Submit
+        <button
+          type="submit"
+          disabled={loading}
+          className="px-6 py-2 bg-violet-500 text-black uppercase font-normal rounded-full lg:text-sm text-xs"
+        >
+          {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Submit"}
         </button>
       </form>
     </div>

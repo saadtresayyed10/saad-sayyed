@@ -7,6 +7,18 @@ export async function POST(req: NextRequest) {
   try {
     const { email, thread } = await req.json();
     const data = { email, thread };
+
+    if (!data.email) {
+      return NextResponse.json({ error: "Email is required" }, { status: 501 });
+    }
+
+    if (!data.thread) {
+      return NextResponse.json(
+        { error: "Thread is required" },
+        { status: 501 }
+      );
+    }
+
     const addContact = await prisma.contact.create({
       data: data,
     });
