@@ -36,7 +36,7 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/contact", {
+      await axios.post("https://sayyedsaad.vercel.app/api/contact", {
         email: email,
         thread: thread,
       });

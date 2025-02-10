@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -19,7 +22,12 @@ const Certificates = ({
   year,
 }: CertificatesProps) => {
   return (
-    <div className="flex justify-start items-start flex-col lg:gap-y-2 gap-y-1 bg-neutral-800 text-white font-unbounded lg:px-10 px-6 lg:py-8 py-3 shadow-2xl rounded-lg border border-violet-800">
+    <motion.div
+      initial={{ opacity: 0, x: -40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.6, ease: "easeOut", duration: 0.6 }}
+      className="flex justify-start items-start flex-col lg:gap-y-2 gap-y-1 bg-neutral-800 text-white font-unbounded lg:px-10 px-6 lg:py-8 py-3 shadow-2xl rounded-lg border border-violet-800"
+    >
       <h1 className="lg:text-2xl text-xl">{name}</h1>
       <h4 className="text-xs font-light">{year}</h4>
       <h2 className="mt-4 text-lg">{provider}</h2>
@@ -32,7 +40,7 @@ const Certificates = ({
       >
         Visit <ArrowUpRight className="w-4 h-4 stroke-[1.5]" />
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navItems } from "../data";
+import Menubar from "./Menubar";
 
 const Navbar = () => {
   return (
@@ -30,12 +31,9 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <Link
-        href="/"
-        className="block lg:hidden text-xs border-violet-500 border-b-2 pb-1 uppercase"
-      >
-        Menu
-      </Link>
+      <div className="lg:hidden block">
+        <Menubar />
+      </div>
     </div>
   );
 };
