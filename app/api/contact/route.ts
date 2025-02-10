@@ -9,13 +9,13 @@ export async function POST(req: NextRequest) {
     const data = { email, thread };
 
     if (!data.email) {
-      return NextResponse.json({ error: "Email is required" }, { status: 501 });
+      return NextResponse.json({ error: "Email is required" }, { status: 500 });
     }
 
     if (!data.thread) {
       return NextResponse.json(
         { error: "Thread is required" },
-        { status: 501 }
+        { status: 500 }
       );
     }
 

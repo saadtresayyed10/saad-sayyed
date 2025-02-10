@@ -13,16 +13,23 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!email.trim()) {
+      console.log("Email is required");
+      return;
+    }
+
+    if (!thread.trim()) {
+      console.log("Thread is required");
+      return;
+    }
+
     setLoading(true);
     try {
       await axios.post("http://localhost:3000/api/contact", {
         email: email,
         thread: thread,
       });
-
-      if (email === "") {
-        console.log("");
-      }
 
       console.log("Added to DB");
       setEmail("");
