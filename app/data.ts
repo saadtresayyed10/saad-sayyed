@@ -4,10 +4,6 @@ export const navItems = [
     link: "/work",
   },
   {
-    name: "Resume",
-    link: "/resume",
-  },
-  {
     name: "Certificates",
     link: "/certificates",
   },
@@ -92,3 +88,5 @@ export const certificates = [
     link: "https://coursera.org/share/a9fe308f66c1430c9beeb8a8ae05417c",
   },
 ];
+
+// TODO: Add Resume and Work details
