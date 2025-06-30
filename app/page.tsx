@@ -1,5 +1,4 @@
 import About from "./_components/About";
-import Contact from "./_components/Contact";
 import HeroSection from "./_components/Hero";
 import Projects from "./_components/Projects";
 
@@ -9,7 +8,6 @@ const HomePage = () => {
       <HeroSection />
       <About />
       <Projects />
-      <Contact />
     </div>
   );
 };
